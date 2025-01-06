@@ -46,19 +46,19 @@ for (let x of language) {
 
 // --While--
 
-while (i < 10) {
-  text += "The number is " + i;
-  i++;
-}
+// while (i < 10) {
+//   text += "The number is " + i;
+//   i++;
+// }
 
 // console.log(text); // result == "The number is 1The number is 2The number is 3The number is 4The number is 5The number is 6The number is 7The number is 8The number is 9The number is 10"
 
 // ===
 
-do {
-  text += "The number is " + i;
-  i++;
-} while (i < 10);
+// do {
+//   text += "The number is " + i;
+//   i++;
+// } while (i < 10);
 
 // --break--
 
@@ -80,3 +80,11 @@ for (let i = 0; i < 10; i++) {
 
 // The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
 
+outerLoop: for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 3; j++) {
+    if (i === j) {
+      console.log(`escape from the outerLoop i=${i} and j=${j}`);
+      break outerLoop; // escape from the outer loop
+    }
+  }
+}
